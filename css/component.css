@@ -168,7 +168,7 @@
 .slideshow nav span {
 	position: fixed;
 	z-index: 1000;
-	color: #59656c;
+	color: #666;
 	text-align: center;
 	padding: 3%;
 	cursor: pointer;
@@ -190,7 +190,7 @@
 	top: 0;
 	right: 0;
 	padding: 0.5em 1em;
-	color: #31373a;
+	color: #666;
 }
 
 .icon:before,
@@ -289,17 +289,17 @@ span.nav-close:before {
 }
 /* General styles for all menus */
 .cbp-spmenu {
-	background: #47a3da;
+	background: #666;
 	position: fixed;
 }
 
 .cbp-spmenu h3 {
-	color: #afdefa;
+	color: #fff;
 	font-size: 1.9em;
 	padding: 20px;
 	margin: 0;
 	font-weight: 300;
-	background: #0d77b6;
+	background: #333;
 }
 
 .cbp-spmenu a {
@@ -310,12 +310,12 @@ span.nav-close:before {
 }
 
 .cbp-spmenu a:hover {
-	background: #258ecd;
+	background: #999;
 }
 
 .cbp-spmenu a:active {
-	background: #afdefa;
-	color: #47a3da;
+	background: #333;
+	color: #666;
 }
 
 /* Orientation-dependent styles for the content of the menu */
@@ -350,7 +350,7 @@ span.nav-close:before {
 	float: left;
 	width: 20%;
 	padding: 0.8em;
-	border-left: 1px solid #258ecd;
+	border-left: 1px solid #333;
 }
 
 /* Vertical menu that slides from the left or right */
