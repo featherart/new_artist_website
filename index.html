@@ -12,13 +12,13 @@
 		<link rel="stylesheet" type="text/css" href="css/default.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<script src="js/modernizr.custom.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	</head>
 	<body class="cbp-spmenu-push">
 		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-			<h3>Menu</h3>
-			<a href="#" onClick="$('iframe').show();">Silkscreens</a>
-			<a href="#" target="test">test</a>
+			<h3><a href="index.html">Menu</a></h3>
+			<a href="#" onClick="showFrame('silkscreens');">Silkscreens</a>
+			<a href="#" onClick="showFrame('test');">test</a>
 			<a href="#">Zucchini garlic</a>
 			<a href="#">Catsear azuki bean</a>
 			<a href="#">Dandelion bunya</a>
@@ -28,9 +28,7 @@
 			<header class="clearfix">
 					<nav>
 						<div class="menu-button">	
-																		
-								  
-					
+																										  					
 						<span>the art of</span>			
 						<h1>Feather Knee</h1></br>	
 						<button id="showRight">Open Menu</button>	
@@ -38,49 +36,57 @@
 					</div>						
 			</header>
 			<div class="main-content">
-				<iframe src="silkscreens.html" frameborder='0' name="silkscreens" width="100%" height="800">
+				<iframe src="silkscreens.html" id="silkscreens" frameborder='0' name="silkscreens" width="100%" height="800">
 				</iframe>
-				<iframe src="test.html" frameborder='0' name="test" width="100%" height="800">
+				<iframe src="test.html" frameborder='0' id="test" name="test" width="100%" height="800">
 				</iframe>
 			</div>
-
+			<div class="default-content">
+				<iframe src="silkscreens.html" frameborder='0' id="test" name="test" width="100%" height="800">
+				</iframe>
+			</div>
 		</div>
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
 		<script src="js/classie.js"></script>
 		<script>
-			var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
-				showRight = document.getElementById( 'showRight' ),
-				body = document.body;
+			var menuRight = $("#cbp-spmenu-s2")[0], 
+					showRight = $("#showRight")[0];
 
 			showRight.onclick = function() {
+				if( $( this ).html() === "Open Menu" ) {
+					$("#showRight").text("Close Menu");
+				}
+				else {
+					$("#showRight").text("Open Menu");
+				}
 				classie.toggle( this, 'active' );
 				classie.toggle( menuRight, 'cbp-spmenu-open' );
 				disableOther( 'showRight' );
+
 			};
 			function disableOther( button ) {
 				if( button !== 'showRight' ) {
 					classie.toggle( showRight, 'disabled' );
 				}
 			}
-
-			function hideToggle(button, elem) {
-
-				$(button).toggle( function () {
-						console.log("here's button: " + button);
-						console.log("here's element: " + elem);
-				    $(elem).hide();
-
-				 },function () {
-
-				    $(elem).show();
-
-				 });
-
+			function showFrame(frameName) {
+				$("#"+frameName).show();
+				$(".menu-button").hide();
+				$("#sbp-spmenu-s2").hide();
+				$("header.clearfix").hide();
+			}
+			function hideFrame(frameName) {
+				$("#"+frameName).hide();
+				$(".menu-button").show();
+				$("#sbp-spmenu-s2").hide();
+				$("header.clearfix").remove();
 			}
 
-			// hideToggle(".button1", ".iframe1");
-			// hideToggle(".button2", ".iframe2");
-		
+			// super hacktastic - probs a better way
+			// need a frame for the front page that doesn't go into a gallery so you don't have to worry about collapsing the header
+			$("img[name='embarcadero_thumb.jpg'").on("click", function() {
+				alert("click");
+			});
 		</script>
 	</body>
 </html>
