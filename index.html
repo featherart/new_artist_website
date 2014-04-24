@@ -12,12 +12,13 @@
 		<link rel="stylesheet" type="text/css" href="css/default.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<script src="js/modernizr.custom.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	</head>
 	<body class="cbp-spmenu-push">
 		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
 			<h3>Menu</h3>
-			<a href="#">Celery seakale</a>
-			<a href="#">Dulse daikon</a>
+			<a href="#" onClick="$('iframe').show();">Silkscreens</a>
+			<a href="#" target="test">test</a>
 			<a href="#">Zucchini garlic</a>
 			<a href="#">Catsear azuki bean</a>
 			<a href="#">Dandelion bunya</a>
@@ -25,19 +26,23 @@
 		</nav>
 		<div class="container">
 			<header class="clearfix">
-				<nav>
-					<div class="main">			
-						<section>		
-							<button id="showRight">Open Menu</button>
-					  </section>		
-					<div>
-					<div class="title">
+					<nav>
+						<div class="menu-button">	
+																		
+								  
+					
 						<span>the art of</span>			
-						<h1>Feather Knee</h1>	
-					</div>			
-				</nav>	
-
+						<h1>Feather Knee</h1></br>	
+						<button id="showRight">Open Menu</button>	
+						</nav>	
+					</div>						
 			</header>
+			<div class="main-content">
+				<iframe src="silkscreens.html" frameborder='0' name="silkscreens" width="100%" height="800">
+				</iframe>
+				<iframe src="test.html" frameborder='0' name="test" width="100%" height="800">
+				</iframe>
+			</div>
 
 		</div>
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
@@ -57,6 +62,24 @@
 					classie.toggle( showRight, 'disabled' );
 				}
 			}
+
+			function hideToggle(button, elem) {
+
+				$(button).toggle( function () {
+						console.log("here's button: " + button);
+						console.log("here's element: " + elem);
+				    $(elem).hide();
+
+				 },function () {
+
+				    $(elem).show();
+
+				 });
+
+			}
+
+			// hideToggle(".button1", ".iframe1");
+			// hideToggle(".button2", ".iframe2");
 		
 		</script>
 	</body>

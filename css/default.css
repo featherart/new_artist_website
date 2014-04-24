@@ -65,26 +65,26 @@ a:hover {
 	font-size: 2.125em;
 	line-height: 1.4;
 	margin: 0;
-	float: left;
-	font-weight: 300;
+	font-weight: 200;
 }
 
 .container > header span {
 	display: block;
 	font-weight: 700;
 	text-transform: uppercase;
-	letter-spacing: 0.8em;
+	letter-spacing: 0.7em;
 	padding: 0 0 0.6em 0.1em;
 }
 
 .container > header nav {
 	float: left;
+	
 }
 
 .container > header nav a {
-	display: block;
+	display: inline-block;
 	float: left;
-	position: relative;
+	position: absolute;
 	width: 2.5em;
 	height: 2.5em;
 	background: #fff;
@@ -115,22 +115,14 @@ a:hover {
 	background: #999;
 }
 .title {
-	
+	float: center;
+
+}
+.main-content > iframe {
+	display:none;
 }
 
-.main > section {
-	max-width: 90%;
-	width: 90%;
-	margin: 0 auto;
-	float: left;
-}
-
-.main > section h2 {
-	font-weight: 300;
-	color: #ccc;
-}
-
-.main > section button {
+.menu-button > button {
 	border: none;
 	background: #ccc;
 	color: #fff;
@@ -140,17 +132,21 @@ a:hover {
 	cursor: pointer;
 	margin: 5px 0;
 	font-size: 0.8em;
+	float: left;
+	max-width: 90%;
+	width: 90%;
+	margin: 0 auto;
 }
 
-.main > section button:hover {
+.menu-button button:hover {
 	background: #999;
 }
 
-.main > section button.active {
+.menu-button button.active {
 	background: #ccc;
 }
 
-.main > section button.disabled {
+.menu-button button.disabled {
 	background: #aaa;
 	pointer-events: none;
 }
