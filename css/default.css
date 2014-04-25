@@ -128,7 +128,9 @@ a:hover {
 
 .menu-button > button {
 	border: none;
-	background: #ccc;
+	background: #999;
+	opacity:0.6;
+	filter:alpha(opacity=60); /* For IE8 and earlier */
 	color: #fff;
 	padding: 1.5em;
 	display: block;
@@ -137,8 +139,7 @@ a:hover {
 	margin: 5px 0;
 	font-size: 0.8em;
 	float: left;
-	max-width: 90%;
-	width: 90%;
+	max-width: 100%;
 	margin: 0 auto;
 }
 

@@ -311,12 +311,12 @@ span.nav-close:before {
 }
 
 .cbp-spmenu a:hover {
-	background: #eee;
+	background: #666;
 }
 
 .cbp-spmenu a:active {
-	background: #333;
-	color: #666;
+	background: #666;
+	color: #fff;
 }
 
 /* Orientation-dependent styles for the content of the menu */

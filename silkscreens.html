@@ -12,13 +12,19 @@
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<script src="js/modernizr.custom.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	</head>
 	<body>
 		<div class="container">
 			<header class="clearfix">
 				<span>About Silkscreens <span class="bp-icon bp-icon-about" data-content="These are handmade prints. I start with a drawing for each layer of color, then create a stencil from the drawing. Using a squeegee I push paint through the stencil, using hand blends to achieve the unique marbling effects. Each print within an edition is unique."></span></span>
+
+				<div class="menu-button">													
+					<button id="showRight" onClick="closeMenu();">Menu</button>
+				</div>
 				<!-- <h1>Silkscreens</h1> -->
 				<nav>
+
 					<!-- <a href="./index.html" class="bp-icon bp-icon-prev" data-info="previous Blueprint"><span>Back to Main</span></a> -->
 					<!--a href="" class="bp-icon bp-icon-next" data-info="next Blueprint"><span>Next Blueprint</span></a-->
 					<!-- <a href="http://tympanus.net/codrops/?p=18699" class="bp-icon bp-icon-drop" data-info="back to the Codrops article"><span>back to the Codrops article</span></a>
@@ -30,7 +36,7 @@
 					<ul class="grid">
 						<li class="grid-sizer"></li><!-- for Masonry column width -->
 						<li>
-							<figure id="figgy">
+							<figure>
 								<img src="img/thumb/embarcadero_thumb.jpg" alt="img01"/>
 								<figcaption><h4>Embarcadero (2012)</h4></figcaption>
 							</figure>
@@ -432,6 +438,16 @@
 				</section><!-- // slideshow -->
 			</div><!-- // grid-gallery -->
 		</div>
+		<script>
+		  function closeMenu() {
+		  	console.log("in close");
+		  	var thing = $(".cbp-spmenu");
+		  	var other = parent.getElementByClass("cbp-spmenu");
+		  	console.log("heres thing: " + other);
+		  	//$(".cbp-spmenu").hide();
+		  }
+			
+		</script>
 		<script src="js/imagesloaded.pkgd.min.js"></script>
 		<script src="js/masonry.pkgd.min.js"></script>
 		<script src="js/classie.js"></script>

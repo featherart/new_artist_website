@@ -16,7 +16,7 @@
 	</head>
 	<body class="cbp-spmenu-push">
 		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-			<h3><a href="index.html">Menu</a></h3>
+			<h3><a href="index.html">Menu</a><a href="#" onClick="$('.cbp-spmenu').toggle();">x</a></h3>
 			<a href="#" onClick="showFrame('silkscreens');">Silkscreens</a>
 			<a href="#" onClick="showFrame('test');">test</a>
 			<a href="#">Zucchini garlic</a>
@@ -27,13 +27,12 @@
 		<div class="container">
 			<header class="clearfix">
 					<nav>
-						<div class="menu-button">	
-																										  					
-						<span>the art of</span>			
-						<h1>Feather Knee</h1></br>	
-						<button id="showRight">Open Menu</button>	
-						</nav>	
-					</div>						
+						<div class="menu-button">																	
+							<span>the art of</span>			
+							<h1>Feather Knee</h1>						
+							<button id="showRight">Menu</button>		
+						</div>	
+					</nav>					
 			</header>
 			<div class="main-content">
 				<iframe src="silkscreens.html" id="silkscreens" frameborder='0' name="silkscreens" width="100%" height="800">
@@ -44,7 +43,7 @@
 				</iframe>
 			</div>
 			<div class="default-content">
-				<iframe src="cityscapes.html" frameborder='0' id="cityscapes" name="test" width="100%" height="800">
+				<iframe src="default-front.html" frameborder='0' id="default-front" name="front" width="100%" height="800">
 				</iframe>
 			</div>
 		</div>
@@ -55,11 +54,11 @@
 					showRight = $("#showRight")[0];
 
 			showRight.onclick = function() {
-				if( $( this ).html() === "Open Menu" ) {
+				if( $( this ).html() === "Menu" ) {
 					$("#showRight").text("Close Menu");
 				}
 				else {
-					$("#showRight").text("Open Menu");
+					$("#showRight").text("Menu");
 				}
 				classie.toggle( this, 'active' );
 				classie.toggle( menuRight, 'cbp-spmenu-open' );
@@ -82,6 +81,7 @@
 				$(".menu-button").show();
 				$("#sbp-spmenu-s2").hide();
 				$("header.clearfix").remove();
+				$("#default-content").hide();
 			}
 
 			// super hacktastic - probs a better way
