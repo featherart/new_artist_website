@@ -134,12 +134,12 @@ a:hover {
 	color: #fff;
 	padding: 1.5em;
 	display: block;
-	width: 100%;
+	width: 40%;
 	cursor: pointer;
 	margin: 5px 0;
 	font-size: 0.8em;
-	float: left;
-	max-width: 100%;
+	float: center;
+	max-width: 40%;
 	margin: 0 auto;
 }
 

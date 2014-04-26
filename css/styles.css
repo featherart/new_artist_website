@@ -3,6 +3,9 @@
 	width: 100%;
 	height: 300px;
 	}
+body {
+	max-height: 100px;
+}
 	
 #scroller {
 	max-width: 80%;
@@ -11,6 +14,7 @@
 }
 #vertical-scroll {
 	padding-left: 120px;
+	overflow: hidden;
 }
 
 #long div	{
