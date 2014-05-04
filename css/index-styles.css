@@ -130,6 +130,7 @@ article p {
 }
 footer {
    text-align: center;
+   color: #999;
 }
 body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox {
    margin-bottom: 0;

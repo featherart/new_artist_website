@@ -25,6 +25,10 @@ body {
 h1 {
 	color: #666666;
 }
+h4 {
+	color: #333;
+	font-weight: 300;
+}
 
 a {
 	color: #999999;
