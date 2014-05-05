@@ -32,7 +32,7 @@
     /*background-color: black;*/
    }
    .item.w4 img {
-    max-width: 70%
+    max-width: 99%;
    }
 
 @media only screen and (max-width : 650px) and (min-width : 481px) {
