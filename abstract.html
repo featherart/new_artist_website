@@ -17,7 +17,8 @@
   <body>
     <div class="container">
       <header class="clearfix">
-        <div class="arrow lightbox">◀︎  use arrow keys to navigate  ▶︎
+        <div class="arrow lightbox">
+          ◀︎  use arrow keys to navigate  ▶︎
         </div>
         <span>Abstract Series <span class="bp-icon bp-icon-about" data-content="This series of oil paintings are colorist meditations on the natural world. They were influenced by waterfalls, seascapes, and deserts."></span></span>
         <nav>
@@ -126,16 +127,16 @@
           <figcaption><h4>Ophelia</h4></figcaption></a>
         </div>
       </div> <!-- end container -->
+    </div>
     <script>
-      var container = document.querySelector('#container');
-      console.log("in script");
-      console.log(container);
       var msnry = new Masonry( container, {
-        // options...
         itemSelector: '.item',
         columnWidth: 200
-      });
-      
+      } );
+      // layout Masonry again after all images have loaded
+      imagesLoaded( container, function() {
+        msnry.layout();
+      });          
     </script>
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/lightbox.js"></script>
