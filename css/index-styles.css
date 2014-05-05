@@ -137,6 +137,10 @@ body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleB
 }
 @media only screen and (max-width : 480px) {
    /* Smartphone view: 1 tile */
+   .text {
+    padding-left: 5%;
+    padding-right: 30%;
+   }
    .box {
       width: 90%;
       padding-bottom: 90%;
