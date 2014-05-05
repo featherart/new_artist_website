@@ -24,6 +24,15 @@ body:after {
   line-height: 0;
   font-weight: normal;
 }
+/* my additions */
+.lightbox.arrow {
+  position: absolute;
+  top: 20px;
+  display: block;
+  color: #fff;
+  font-weight: 200;
+  font-size: 0.8em;
+}
 
 .lightbox .lb-image {
   display: block;
@@ -91,7 +100,7 @@ body:after {
   height: 100%;
   width: 100%;
   z-index: 10;
-  border: 20px solid #fff;
+  border: 5px solid #fff;
   border-bottom: 15px solid #fff;
 }
 
@@ -181,10 +190,10 @@ body:after {
 
 .lb-data .lb-caption {
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.2em;
-  padding-left: 5%;
-  color: #333;
+  padding-left: 2%;
+  color: #666;
 }
 
 .lb-data .lb-number {
@@ -217,3 +226,4 @@ body:after {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
+
