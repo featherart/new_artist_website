@@ -13,12 +13,13 @@
     <link rel="stylesheet" type="text/css" href="css/component.css" />
     <link rel="stylesheet" type="text/css" href="css/lightbox.css">
     <script src="js/masonry.pkgd.js"></script>
+    <script src="js/imagesloaded.pkgd.js"></script>
   </head>
   <body>
     <div class="container">
       <header class="clearfix">
       	<div class="arrow lightbox">
-      		◀︎  use arrow keys to navigate  ▶︎
+      		◀︎  arrow keys navigate  ▶︎
         </div>
         <span>Silkscreens <span class="bp-icon bp-icon-about" data-content="These are painterly handmade prints. Each begins with drawings for each layer of color, which are turned into stencils. Acrylic paint is hand-mixed to achieve the unique marbling effects while using a squeegee to reproduce the image. Paper is 100% cotton rag, which is both archival and planet-friendly. Editioned and signed by the artist, no two images within an edition are exactly alike."></span></span>
         <nav>
@@ -209,6 +210,7 @@
 			</div>
     </div> <!-- end container -->
     <script>
+    	jQuery(window).on('load', function(){ var $ = jQuery;
       var msnry = new Masonry( container, {
         itemSelector: '.item',
         columnWidth: 200
