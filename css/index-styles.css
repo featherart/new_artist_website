@@ -156,7 +156,7 @@ body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleB
    }
    article p {
       max-width: 85%;
-      text-align: justify;
+      /*text-align: justify;*/
       padding-left: 15%;
       padding-right: 5%;
    }

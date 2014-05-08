@@ -192,6 +192,6 @@ a:hover {
 	}
 
 	.container > header > span {
-		text-indent: 30px;
+		padding-right: 12%;
 	}
 }
