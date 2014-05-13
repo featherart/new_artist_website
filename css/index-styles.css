@@ -1,7 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=Bilbo);
+
 body {
    margin: 0;
    padding: 0;
-   font-family: 'Lato', Calibri, Arial, sans-serif;
+   font-family: 'Lucida Grande', Arial, sans-serif;
    color: #666;
 }
 .container {
@@ -41,7 +43,9 @@ body {
     opacity:1;
 }
 
-.title span {
+.top span {
+   font-family: Lucida Grande;
+   font-size: 1em;
    font-weight: 100;
    line-height: 1;
    text-align: center;
@@ -52,8 +56,10 @@ body {
    color: #666;
 }
 .title {
+   font-family: 'Bilbo';
+   font-size: 1.6em;
    padding: 10px;
-   padding-top: 30px;
+   /*padding-top: 30px;*/
    text-align: center;
    font-weight: 200;
    display: block;
@@ -144,9 +150,12 @@ article p {
    letter-spacing: 0.7em;
 }
 footer {
+   font-style: italic;
    text-align: center;
+   font-size: .8em;
    color: #999;
    padding-bottom: 10%;
+   letter-spacing: .5em;
 }
 body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox {
    margin-bottom: 0;
