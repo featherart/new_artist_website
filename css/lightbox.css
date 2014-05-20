@@ -227,3 +227,9 @@ body:after {
   opacity: 1;
 }
 
+@media only screen and (max-width : 480px) {
+  .arrow .lightbox {
+    visibility: hidden;
+  }
+}
+

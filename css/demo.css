@@ -177,7 +177,9 @@ a:hover {
 }
 
 @media screen and (max-width: 55em) {
-
+	span.bp-icon.bp-icon-about {
+		visibility: hidden;
+	}
 	.container > header h1,
 	.container > header nav {
 		float: none;
@@ -193,6 +195,8 @@ a:hover {
 	}
 
 	.container > header > span {
-		padding-right: 12%;
+		position: relative;
+		left: 0px;
+		
 	}
 }
