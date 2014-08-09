@@ -8,7 +8,7 @@ body {
 }
 .container {
   padding: 10%;
-  padding-top: 5%;
+  padding-top: 2%;
 }
 .main-content {
   /*max-width: 800px;*/
@@ -56,12 +56,12 @@ body {
    color: #666;
 }
 .title {
-   font-family: 'Bilbo';
-   font-size: 1.6em;
+   font-family: Lucida Grande;
+   font-size: 1.0em;
    padding: 10px;
    /*padding-top: 30px;*/
    text-align: center;
-   font-weight: 200;
+   font-weight: 100;
    display: block;
    color: #999;
 }
